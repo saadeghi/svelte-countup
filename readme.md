@@ -1,25 +1,41 @@
-# Svelte component template
+# Svelte CountUp
 
-To create a svelte component package or a web component package
+This Svelte component counts up from an initial number to a target number.
+
+## Install
+
+```
+npm i svelte-countup
+```
 
 ## Usage
 
-1. In `package.json` file change `name` of your package (kebab-case string)
-1. In `package.json` file change `componentname` value to your own component name (PascalCase string).
+```js
+import Countup from "svelte-countup";
+```
 
-## Try it in your app
+```svelte
+<Countup value={100} />
+```
 
-1. Run `npm pack`
-1. Test your component in your Svelte app by installing it locally `npm i ./path/to/package/`
-1. Import it in your app `import YourComponentName from 'your-package-name'`
+## Porps
 
-## Publish your package to npm
+All props (with default values):
 
-1. Deploy your package to npm with `npm publish`
+```svelte
+<Countup
+  initial={0}
+  value={100}
+  duration={3000}
+  step={1}
+  roundto={1}
+  format={true}
+/>
+```
 
-## Make it a web component
-
-1. Add `<svelte:options tag="custom-element" />` tag to your component where `custom-element` is the tag name of your web component
-1. In `rollup.config.js` file set `plugins > svelte > compilerOptions > customElement` to `true`
-1. Import your component like `import 'your-package-name'`
-1. Use your web component like `<custom-element></custom-element>` tag where `custom-element` is the tag name you chose in step 1
+- `initial`: The initial number to count up from.
+- `value`: The target number to count up to.
+- `duration`: The duration of the animation in milliseconds.
+- `step`: The number of steps to count up by.
+- `roundto`: The number of decimal places to round to.
+- `format`: Whether to separate thousands with commas.
