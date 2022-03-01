@@ -1,0 +1,24 @@
+{
+  "name": "svelte-component-template",
+  "componentname": "Component",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "svelte": "src/index.js",
+  "author": "Pouya Saadeghi",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "dev": "rollup -cw",
+    "prepack": "BUNDLE=true rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup": "^2.68.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.46.4"
+  }
+}
