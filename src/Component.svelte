@@ -1,5 +1,5 @@
 <script>
-  import { nanoid } from "nanoid";
+  import { nanoid } from "nanoid/nanoid";
   import { inview } from "svelte-inview";
 
   const id = nanoid();

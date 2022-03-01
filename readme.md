@@ -2,6 +2,10 @@
 
 This Svelte component counts up from an initial number to a target number.
 
+## Demo
+
+https://svelte.dev/repl/e38ffac8831d44128a127b5dfe114f6f?version=3.46.4
+
 ## Features
 
 - You can specify the initial number, target number, and the duration of the count up
