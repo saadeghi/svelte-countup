@@ -2,6 +2,15 @@
 
 This Svelte component counts up from an initial number to a target number.
 
+## Features
+
+- You can specify the initial number, target number, and the duration of the count up
+- You can specify the number of decimal places
+- You can choose the target number to be rounded or not
+- You can set the step size of the count up
+- You can use multiple count ups on the same page
+- Countup only starts when it is visible on the screen and stops when it is not visible
+
 ## Install
 
 ```
