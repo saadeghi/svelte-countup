@@ -31,7 +31,7 @@ import Countup from "svelte-countup";
 <Countup value={100} />
 ```
 
-## Porps
+## Props
 
 All props (with default values):
 
