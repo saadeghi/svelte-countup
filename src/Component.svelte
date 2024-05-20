@@ -31,7 +31,7 @@
   counterResult[id] = initial;
   timers[id] = setInterval(() => {
     if (isInView) {
-      if (counterResult[id] <= max) {
+      if (counterResult[id] < max) {
         counterResult[id] += step;
       } else {
         clearInterval(timers[id]);
