@@ -1,5 +1,5 @@
 <script>
-  import { nanoid } from "nanoid/nanoid";
+  import { nanoid } from "nanoid";
   import { inview } from "svelte-inview";
 
   const id = nanoid();
@@ -29,16 +29,19 @@
   }
 
   counterResult[id] = initial;
-  timers[id] = setInterval(() => {
-    if (isInView) {
-      if (counterResult[id] < max) {
-        counterResult[id] += step;
-      } else {
-        clearInterval(timers[id]);
-        counterResult[id] = Math.round(max / roundto) * roundto;
+  timers[id] = setInterval(
+    () => {
+      if (isInView) {
+        if (counterResult[id] < max) {
+          counterResult[id] += step;
+        } else {
+          clearInterval(timers[id]);
+          counterResult[id] = Math.round(max / roundto) * roundto;
+        }
       }
-    }
-  }, duration / ((max - initial) / step));
+    },
+    duration / ((max - initial) / step)
+  );
 </script>
 
 <span
